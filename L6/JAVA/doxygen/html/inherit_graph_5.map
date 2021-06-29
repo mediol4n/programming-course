@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interfaceParserGeneric.html" title="ParserGeneric" alt="" coords="5,56,117,83"/>
+<area shape="rect" id="node2" href="$classParserDouble.html" title="ParserDouble" alt="" coords="165,5,273,32"/>
+<area shape="rect" id="node3" href="$classParserInteger.html" title="ParserInteger" alt="" coords="165,56,273,83"/>
+<area shape="rect" id="node4" href="$classParserString.html" title="ParserString" alt="" coords="169,107,269,133"/>
+</map>

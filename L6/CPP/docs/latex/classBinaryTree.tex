@@ -1,0 +1,417 @@
+\hypertarget{classBinaryTree}{}\section{Binary\+Tree$<$ T $>$ Class Template Reference}
+\label{classBinaryTree}\index{Binary\+Tree$<$ T $>$@{Binary\+Tree$<$ T $>$}}
+
+
+{\ttfamily \#include $<$binary\+Tree.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBinaryTree_a9202cce23960faf8f647c6765decccd4}{Binary\+Tree} ()
+\item 
+void \hyperlink{classBinaryTree_ace861086e9b5510f32d04ad081500463}{add\+Node} (T key)
+\item 
+void \hyperlink{classBinaryTree_a547a4d22eb7a8f18ca09dd77402d88c6}{in\+Order} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$focus\+Node)
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classBinaryTree_a6110ff77e17b9f0db2170c8bead11210}{search} (T key)
+\item 
+void \hyperlink{classBinaryTree_a86fedb07a87af1b02e3408950c4f9663}{remove} (T key)
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classBinaryTree_a0055a6962c39301b5def80189be99601}{get\+Replacement\+Node} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$replaced\+Node)
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classBinaryTree_af525a78601eba600d880d1cd947a215a}{get\+Root} ()
+\item 
+void \hyperlink{classBinaryTree_a4653328dc7727b7c32285bb50a10f6c9}{delete\+Tree} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$node)
+\item 
+\hyperlink{classBinaryTree_a390c319c0b28b958463851119edb8af3}{$\sim$\+Binary\+Tree} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Binary\+Tree$<$ T $>$}
+
+Klasa drzewa binarnego \begin{DoxySeeAlso}{See also}
+Node$<$\+T$>$ 
+\end{DoxySeeAlso}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Typ} & tworzonego drzewa \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 12 of file binary\+Tree.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBinaryTree_a9202cce23960faf8f647c6765decccd4}\label{classBinaryTree_a9202cce23960faf8f647c6765decccd4}} 
+\index{Binary\+Tree@{Binary\+Tree}!Binary\+Tree@{Binary\+Tree}}
+\index{Binary\+Tree@{Binary\+Tree}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{Binary\+Tree()}{BinaryTree()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::\hyperlink{classBinaryTree}{Binary\+Tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konstruktor drzewa 
+
+Definition at line 18 of file binary\+Tree.\+hpp.
+
+
+\begin{DoxyCode}
+18                      \{
+19             \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root} = NULL;
+20         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinaryTree_a390c319c0b28b958463851119edb8af3}\label{classBinaryTree_a390c319c0b28b958463851119edb8af3}} 
+\index{Binary\+Tree@{Binary\+Tree}!````~Binary\+Tree@{$\sim$\+Binary\+Tree}}
+\index{````~Binary\+Tree@{$\sim$\+Binary\+Tree}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{$\sim$\+Binary\+Tree()}{~BinaryTree()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::$\sim$\hyperlink{classBinaryTree}{Binary\+Tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destruktor 
+
+Definition at line 219 of file binary\+Tree.\+hpp.
+
+
+\begin{DoxyCode}
+219 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBinaryTree_ace861086e9b5510f32d04ad081500463}\label{classBinaryTree_ace861086e9b5510f32d04ad081500463}} 
+\index{Binary\+Tree@{Binary\+Tree}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{add\+Node()}{addNode()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::add\+Node (\begin{DoxyParamCaption}\item[{T}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda dodająca wierzchołek w drzewie 
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz który przypiszemy do nowego węzła \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file binary\+Tree.\+hpp.
+
+
+\begin{DoxyCode}
+25                             \{
+26             \hyperlink{classNode}{Node<T>} *node = \textcolor{keyword}{new} \hyperlink{classNode}{Node<T>}(key);
+27 
+28             \textcolor{keywordflow}{if}(\hyperlink{classBinaryTree_af525a78601eba600d880d1cd947a215a}{getRoot}() == NULL) \{
+29                 \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root} = node;
+30                 \textcolor{keywordflow}{return};
+31             \} \textcolor{keywordflow}{else} \{   
+32 
+33                 \hyperlink{classNode}{Node<T>} *focusNode = \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root};
+34                 \hyperlink{classNode}{Node<T>} *parent;
+35 
+36                 \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+37                     parent = focusNode;
+38 
+39                     \textcolor{keywordflow}{if} (key < focusNode->getKey()) \{
+40                         focusNode = focusNode->\hyperlink{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}{getLeft}();
+41                         \textcolor{keywordflow}{if} (focusNode == NULL) \{
+42                             parent->\hyperlink{classNode_afc70e20117ea8083d11736f5ea8a9216}{setLeft}(node);
+43                             \textcolor{keywordflow}{return};
+44                         \}
+45                     \}
+46                     \textcolor{keywordflow}{else} \{
+47                         focusNode = focusNode->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}();
+48                         \textcolor{keywordflow}{if} (focusNode == NULL) \{
+49                             parent->\hyperlink{classNode_ad5c1f634547b3e2d03c3d55d355c0c17}{setRight}(node);
+50                             \textcolor{keywordflow}{return};
+51                         \}
+52                     \}
+53                 \}
+54             \}
+55         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinaryTree_a4653328dc7727b7c32285bb50a10f6c9}\label{classBinaryTree_a4653328dc7727b7c32285bb50a10f6c9}} 
+\index{Binary\+Tree@{Binary\+Tree}!delete\+Tree@{delete\+Tree}}
+\index{delete\+Tree@{delete\+Tree}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{delete\+Tree()}{deleteTree()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::delete\+Tree (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}$<$ T $>$ $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda usuwa wszystkie wierzchołki drzewa 
+\begin{DoxyParams}{Parameters}
+{\em node} & Wierzchołek od którego zaczynamy usuwanie \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 209 of file binary\+Tree.\+hpp.
+
+
+\begin{DoxyCode}
+209                                        \{  
+210             \textcolor{keywordflow}{if} (node == NULL) \{ 
+211                 \textcolor{keywordflow}{return};  
+212             \}
+213             \hyperlink{classBinaryTree_a4653328dc7727b7c32285bb50a10f6c9}{deleteTree}(node->\hyperlink{classNode_a2eaaeffaeef97da6291b788fa131c9ec}{leftChild});  
+214             \hyperlink{classBinaryTree_a4653328dc7727b7c32285bb50a10f6c9}{deleteTree}(node->\hyperlink{classNode_a625cff56d169157a568afaedbb11576b}{rightChild});  
+215             \textcolor{keyword}{delete} node; 
+216         \} 
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinaryTree_a0055a6962c39301b5def80189be99601}\label{classBinaryTree_a0055a6962c39301b5def80189be99601}} 
+\index{Binary\+Tree@{Binary\+Tree}!get\+Replacement\+Node@{get\+Replacement\+Node}}
+\index{get\+Replacement\+Node@{get\+Replacement\+Node}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{get\+Replacement\+Node()}{getReplacementNode()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$T$>$$\ast$ \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::get\+Replacement\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}$<$ T $>$ $\ast$}]{replaced\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda służąca do zastępowania usuwanego wierzchołka 
+\begin{DoxyParams}{Parameters}
+{\em replaced\+Node} & Usuwany wierzchołek \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wierzchołek którym zastąpimy usuwany wierzchołek 
+\end{DoxyReturn}
+
+
+Definition at line 180 of file binary\+Tree.\+hpp.
+
+
+\begin{DoxyCode}
+180                                                            \{
+181             \hyperlink{classNode}{Node<T>} *replacementParent = replacedNode;
+182             \hyperlink{classNode}{Node<T>} *replacement = replacedNode;
+183             \hyperlink{classNode}{Node<T>} *focusNode = replacedNode->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}();
+184 
+185             \textcolor{keywordflow}{while} (focusNode != NULL) \{
+186                 replacementParent = replacement;
+187                 replacement = focusNode;
+188                 focusNode = focusNode->\hyperlink{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}{getLeft}();
+189             \}
+190 
+191             \textcolor{keywordflow}{if} (replacement != replacedNode->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}()) \{
+192                 replacementParent->\hyperlink{classNode_afc70e20117ea8083d11736f5ea8a9216}{setLeft}(replacement->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}());
+193                 replacement->\hyperlink{classNode_ad5c1f634547b3e2d03c3d55d355c0c17}{setRight}(replacedNode->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}());
+194             \}
+195 
+196             \textcolor{keyword}{delete} replacementParent;
+197             \textcolor{keyword}{delete} focusNode;
+198             \textcolor{keywordflow}{return} replacement;
+199         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinaryTree_af525a78601eba600d880d1cd947a215a}\label{classBinaryTree_af525a78601eba600d880d1cd947a215a}} 
+\index{Binary\+Tree@{Binary\+Tree}!get\+Root@{get\+Root}}
+\index{get\+Root@{get\+Root}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{get\+Root()}{getRoot()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$T$>$$\ast$ \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda zwraca korzeń drzewa \begin{DoxyReturn}{Returns}
+Korzeń drzewa 
+\end{DoxyReturn}
+
+
+Definition at line 203 of file binary\+Tree.\+hpp.
+
+
+\begin{DoxyCode}
+203                            \{
+204             \textcolor{keywordflow}{return} \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root};
+205         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinaryTree_a547a4d22eb7a8f18ca09dd77402d88c6}\label{classBinaryTree_a547a4d22eb7a8f18ca09dd77402d88c6}} 
+\index{Binary\+Tree@{Binary\+Tree}!in\+Order@{in\+Order}}
+\index{in\+Order@{in\+Order}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{in\+Order()}{inOrder()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::in\+Order (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}$<$ T $>$ $\ast$}]{focus\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda drukująca drzewo metodą inorder 
+\begin{DoxyParams}{Parameters}
+{\em focus\+Node} & Wierzchołek od którego zaczynamy wypisywanie \\
+\hline
+\end{DoxyParams}
+rekurencyjnie uruchamiamy metodę dla lewego poddrzewa
+
+Następnie wywołujemy metodę dla prawego poddrzewa 
+
+Definition at line 59 of file binary\+Tree.\+hpp.
+
+
+\begin{DoxyCode}
+59                                          \{
+60            \textcolor{keywordflow}{if} (focusNode->\hyperlink{classNode_a906ae0e0b015275eacf168ef55017f7f}{isLeft}()) \{
+61                std::cout << \textcolor{stringliteral}{"("};
+63                \hyperlink{classBinaryTree_a547a4d22eb7a8f18ca09dd77402d88c6}{inOrder}(focusNode->\hyperlink{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}{getLeft}());
+64                std::cout << \textcolor{stringliteral}{")"};
+65            \}
+66            std::cout << focusNode->\hyperlink{classNode_a3c04afa4e4c8e555cc87a22757ab5f6a}{getKey}();
+67            \textcolor{keywordflow}{if} (focusNode->\hyperlink{classNode_a983178a46cc464ca0738ee8c7d8b2cc4}{isRight}()) \{
+68                std::cout << \textcolor{stringliteral}{"("};
+70                \hyperlink{classBinaryTree_a547a4d22eb7a8f18ca09dd77402d88c6}{inOrder}(focusNode->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}());
+71                std::cout << \textcolor{stringliteral}{")"};
+72            \}
+73         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinaryTree_a86fedb07a87af1b02e3408950c4f9663}\label{classBinaryTree_a86fedb07a87af1b02e3408950c4f9663}} 
+\index{Binary\+Tree@{Binary\+Tree}!remove@{remove}}
+\index{remove@{remove}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::remove (\begin{DoxyParamCaption}\item[{T}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda usuwająca wierzchołek z drzewa 
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz który chcemy w drzewa usunąć \\
+\hline
+\end{DoxyParams}
+Szukamy wierzchołka o podanym kluczu
+
+Sprawdzamy, czy dany wierzchołek ma potomków aby złożyć drzewo w całość
+
+W przypadku, gdy drzewo ma oboje potomków wywołujemy metodę get\+Replacement\+Node 
+
+Definition at line 102 of file binary\+Tree.\+hpp.
+
+
+\begin{DoxyCode}
+102                            \{
+103             \textcolor{keywordflow}{if} (\hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root} == NULL) \{
+104                 \textcolor{keywordflow}{return};
+105             \}
+106 
+107             \hyperlink{classNode}{Node<T>} *ptr = \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root};
+108             \hyperlink{classNode}{Node<T>} *parent = \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root};
+109             \textcolor{keywordtype}{bool} isItALeftChild = \textcolor{keyword}{true};
+110 
+112             \textcolor{keywordflow}{while} (ptr->\hyperlink{classNode_a3c04afa4e4c8e555cc87a22757ab5f6a}{getKey}() != key) \{
+113                 parent = ptr;
+114 
+115                 \textcolor{keywordflow}{if} (key < ptr->getKey()) \{
+116                     isItALeftChild = \textcolor{keyword}{true};
+117                     ptr = ptr->\hyperlink{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}{getLeft}();
+118                 \}
+119                 \textcolor{keywordflow}{else} \{
+120                     isItALeftChild = \textcolor{keyword}{false};
+121                     ptr = ptr->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}();
+122                 \}
+123 
+124                 \textcolor{keywordflow}{if} (ptr == NULL) \{
+125                     \textcolor{keywordflow}{return};
+126                 \}
+127             \}
+128 
+130             \textcolor{keywordflow}{if} (!ptr->\hyperlink{classNode_a906ae0e0b015275eacf168ef55017f7f}{isLeft}() && !ptr->\hyperlink{classNode_a983178a46cc464ca0738ee8c7d8b2cc4}{isRight}()) \{
+131                 \textcolor{keywordflow}{if} (ptr == \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root}) \{
+132                     \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root} = NULL;    
+133                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (isItALeftChild) \{
+134                     parent->\hyperlink{classNode_afc70e20117ea8083d11736f5ea8a9216}{setLeft}(NULL);
+135                 \} \textcolor{keywordflow}{else} \{
+136                     parent->\hyperlink{classNode_ad5c1f634547b3e2d03c3d55d355c0c17}{setRight}(NULL);
+137                 \}
+138             \}
+139                     
+140             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!ptr->\hyperlink{classNode_a983178a46cc464ca0738ee8c7d8b2cc4}{isRight}()) \{
+141                 \textcolor{keywordflow}{if} (ptr == \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root}) \{
+142                     \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root} = ptr->\hyperlink{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}{getLeft}();
+143                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (isItALeftChild) \{
+144                         parent->\hyperlink{classNode_afc70e20117ea8083d11736f5ea8a9216}{setLeft}(ptr->\hyperlink{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}{getLeft}());
+145                 \} \textcolor{keywordflow}{else} \{
+146                     parent->\hyperlink{classNode_ad5c1f634547b3e2d03c3d55d355c0c17}{setRight}(ptr->\hyperlink{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}{getLeft}());
+147                 \}
+148             \}
+149 
+150             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!ptr->\hyperlink{classNode_a906ae0e0b015275eacf168ef55017f7f}{isLeft}()) \{
+151                 \textcolor{keywordflow}{if} (ptr == \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root}) \{
+152                     \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root} = ptr->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}();
+153                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (isItALeftChild) \{
+154                     parent->\hyperlink{classNode_afc70e20117ea8083d11736f5ea8a9216}{setLeft}(ptr->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}());
+155                 \} \textcolor{keywordflow}{else} \{
+156                     parent->\hyperlink{classNode_afc70e20117ea8083d11736f5ea8a9216}{setLeft}(ptr->\hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{getRight}());
+157                 \}
+158             \}
+159 
+161             \textcolor{keywordflow}{else} \{
+162                 \hyperlink{classNode}{Node<T>} *replacement = \hyperlink{classBinaryTree_a0055a6962c39301b5def80189be99601}{getReplacementNode}(ptr);
+163 
+164                 \textcolor{keywordflow}{if} (ptr == \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root}) \{
+165                     \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root} = replacement;
+166                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (isItALeftChild) \{
+167                     parent->\hyperlink{classNode_afc70e20117ea8083d11736f5ea8a9216}{setLeft}(replacement);
+168                 \} \textcolor{keywordflow}{else} \{
+169                     parent->\hyperlink{classNode_ad5c1f634547b3e2d03c3d55d355c0c17}{setRight}(replacement);
+170                 \}
+171 
+172                 replacement->\hyperlink{classNode_afc70e20117ea8083d11736f5ea8a9216}{setLeft}(ptr->\hyperlink{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}{getLeft}());
+173             \}
+174 
+175         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classBinaryTree_a6110ff77e17b9f0db2170c8bead11210}\label{classBinaryTree_a6110ff77e17b9f0db2170c8bead11210}} 
+\index{Binary\+Tree@{Binary\+Tree}!search@{search}}
+\index{search@{search}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$T$>$$\ast$ \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::search (\begin{DoxyParamCaption}\item[{T}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda szukająca wierzchołka o danym kluczu 
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz, dla którego szukamy wierzchołek \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wierzchołęk o podanym kluczu lub N\+U\+LL 
+\end{DoxyReturn}
+
+
+Definition at line 78 of file binary\+Tree.\+hpp.
+
+
+\begin{DoxyCode}
+78                                \{
+79             \textcolor{keywordflow}{if} (\hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root} == NULL) \{
+80                 \textcolor{keywordflow}{return} NULL;
+81             \}
+82 
+83             \hyperlink{classNode}{Node<T>}* focusNode = \hyperlink{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}{root};
+84 
+85             \textcolor{keywordflow}{while} (focusNode->\hyperlink{classNode_a3c04afa4e4c8e555cc87a22757ab5f6a}{getKey}() != key) \{
+86                 \textcolor{keywordflow}{if} (key < focusNode->getKey()) \{
+87                     focusNode = focusNode->\hyperlink{classNode_a2eaaeffaeef97da6291b788fa131c9ec}{leftChild};
+88                 \} \textcolor{keywordflow}{else} \{
+89                     focusNode = focusNode->\hyperlink{classNode_a625cff56d169157a568afaedbb11576b}{rightChild};
+90                 \}
+91 
+92                 \textcolor{keywordflow}{if} (focusNode == NULL) \{
+93                     \textcolor{keywordflow}{return} NULL;
+94                 \}
+95             \}
+96 
+97             \textcolor{keywordflow}{return} focusNode;
+98         \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}\label{classBinaryTree_a2db40f59d96afceb1a005e6d9aef2374}} 
+\index{Binary\+Tree@{Binary\+Tree}!root@{root}}
+\index{root@{root}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$T$>$$\ast$ \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$\+::root\hspace{0.3cm}{\ttfamily [private]}}
+
+Wierzchołek drzewa 
+
+Definition at line 15 of file binary\+Tree.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+binary\+Tree.\+hpp\end{DoxyCompactItemize}

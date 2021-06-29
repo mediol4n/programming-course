@@ -1,0 +1,171 @@
+\hypertarget{classConsolReader}{}\section{Consol\+Reader$<$ T $>$ Class Template Reference}
+\label{classConsolReader}\index{Consol\+Reader$<$ T $>$@{Consol\+Reader$<$ T $>$}}
+
+
+{\ttfamily \#include $<$console\+Reader.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classConsolReader_ac922e2362abb36d6a2675a1580a36f82}{Consol\+Reader} ()
+\item 
+void \hyperlink{classConsolReader_a5904bd97fa0b2ee76622b88d5cd17122}{run} ()
+\item 
+\hyperlink{classConsolReader_aeb98e5b65c25b0a96ba7094cbe69add3}{$\sim$\+Consol\+Reader} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBinaryTree}{Binary\+Tree}$<$ T $>$ $\ast$ \hyperlink{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}{tree}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Consol\+Reader$<$ T $>$}
+
+Klasa czytnika konsoli 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em typ} & drzewa na którym wykonujemy operacje \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 10 of file console\+Reader.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classConsolReader_ac922e2362abb36d6a2675a1580a36f82}\label{classConsolReader_ac922e2362abb36d6a2675a1580a36f82}} 
+\index{Consol\+Reader@{Consol\+Reader}!Consol\+Reader@{Consol\+Reader}}
+\index{Consol\+Reader@{Consol\+Reader}!Consol\+Reader@{Consol\+Reader}}
+\subsubsection{\texorpdfstring{Consol\+Reader()}{ConsolReader()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classConsolReader}{Consol\+Reader}$<$ T $>$\+::\hyperlink{classConsolReader}{Consol\+Reader} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konstruktor czytnika 
+
+Definition at line 17 of file console\+Reader.\+hpp.
+
+
+\begin{DoxyCode}
+17                        \{
+18             \hyperlink{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}{tree} = \textcolor{keyword}{new} \hyperlink{classBinaryTree}{BinaryTree<T>}();
+19         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classConsolReader_aeb98e5b65c25b0a96ba7094cbe69add3}\label{classConsolReader_aeb98e5b65c25b0a96ba7094cbe69add3}} 
+\index{Consol\+Reader@{Consol\+Reader}!````~Consol\+Reader@{$\sim$\+Consol\+Reader}}
+\index{````~Consol\+Reader@{$\sim$\+Consol\+Reader}!Consol\+Reader@{Consol\+Reader}}
+\subsubsection{\texorpdfstring{$\sim$\+Consol\+Reader()}{~ConsolReader()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classConsolReader}{Consol\+Reader}$<$ T $>$\+::$\sim$\hyperlink{classConsolReader}{Consol\+Reader} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destruktor 
+
+Definition at line 83 of file console\+Reader.\+hpp.
+
+
+\begin{DoxyCode}
+83 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classConsolReader_a5904bd97fa0b2ee76622b88d5cd17122}\label{classConsolReader_a5904bd97fa0b2ee76622b88d5cd17122}} 
+\index{Consol\+Reader@{Consol\+Reader}!run@{run}}
+\index{run@{run}!Consol\+Reader@{Consol\+Reader}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classConsolReader}{Consol\+Reader}$<$ T $>$\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda pozwalająca wypisać w konsoli operacje jakie chcemy zrobić na drzewie Komenda mówiąca o operacji
+
+Drukowanie drzewa
+
+Koniec pracy
+
+Wartość jaką chcemy wprowadzić/sprawdzić/usunąć
+
+Obrona przed niewłaściwym wpisywaniem do konsoli
+
+Wpisywanie wartości do drzewa
+
+Usuwanie wartości z drzewa
+
+Szukanie wartości w drzewie 
+
+Definition at line 22 of file console\+Reader.\+hpp.
+
+
+\begin{DoxyCode}
+22                    \{
+23             \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+25                 std::string command;
+26                 std::cin >> command;
+27 
+28                 \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"draw"}) \{
+29                     \textcolor{keywordflow}{try} \{
+31                         \hyperlink{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}{tree}->inOrder(\hyperlink{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}{tree}->getRoot());
+32                         std::cout << \textcolor{stringliteral}{" "} << std::endl;
+33                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::exception &e) \{\}
+34                 \} 
+35 
+36                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"end"}) \{
+37                     \textcolor{keywordflow}{try} \{
+39                         \hyperlink{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}{tree}->deleteTree(\hyperlink{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}{tree}->getRoot());
+40                         \textcolor{keywordflow}{return};
+41                     \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::exception &e) \{\}
+42 
+43                 \} \textcolor{keywordflow}{else} \{
+45                     T value;
+46                     std::cin >> value;
+48                     \textcolor{keywordflow}{while}(std::cin.fail()) \{
+49                         std::cin.clear();
+50                         std::cin.ignore();
+51                         std::cin >> value;
+52                     \}
+53 
+54                     \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"insert"}) \{
+56                         \hyperlink{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}{tree}->addNode(value);
+57                     \}
+58                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"delete"}) \{
+59                         \textcolor{keywordflow}{try} \{
+61                             \hyperlink{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}{tree}->remove(value);
+62                         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::exception &e) \{\}                    
+63                     \}
+64 
+65                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (command == \textcolor{stringliteral}{"search"}) \{
+66                         \textcolor{keywordflow}{try} \{
+68                             \hyperlink{classNode}{Node<T>}* node = \hyperlink{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}{tree}->search(value);
+69                             \textcolor{keywordflow}{if} (node != NULL) \{
+70                                 std::cout << \textcolor{stringliteral}{"Znalazlem"} << std::endl;
+71                             \} \textcolor{keywordflow}{else} \{
+72                                 std::cout << \textcolor{stringliteral}{"Nie znalazlem"} << std::endl;   
+73                             \}
+74                             \textcolor{keyword}{delete} node;
+75                         \} \textcolor{keywordflow}{catch} (\textcolor{keyword}{const} std::exception &e) \{\}
+76                     \}
+77 
+78                \}
+79             \}
+80         \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}\label{classConsolReader_a11228c385559fb0f4379b5f0c4fadef5}} 
+\index{Consol\+Reader@{Consol\+Reader}!tree@{tree}}
+\index{tree@{tree}!Consol\+Reader@{Consol\+Reader}}
+\subsubsection{\texorpdfstring{tree}{tree}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classBinaryTree}{Binary\+Tree}$<$T$>$$\ast$ \hyperlink{classConsolReader}{Consol\+Reader}$<$ T $>$\+::tree\hspace{0.3cm}{\ttfamily [private]}}
+
+Drzewo na którym pracujemy 
+
+Definition at line 13 of file console\+Reader.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+console\+Reader.\+hpp\end{DoxyCompactItemize}

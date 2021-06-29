@@ -1,0 +1,312 @@
+\hypertarget{classNode}{}\section{Node$<$ T $>$ Class Template Reference}
+\label{classNode}\index{Node$<$ T $>$@{Node$<$ T $>$}}
+
+
+{\ttfamily \#include $<$node.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode_a46dceddf91d9d3c68f941333ae1a7dc1}{Node} (T \hyperlink{classNode_a9d5e5c1914f5ed67389740354a607527}{key})
+\item 
+T \hyperlink{classNode_a3c04afa4e4c8e555cc87a22757ab5f6a}{get\+Key} ()
+\item 
+void \hyperlink{classNode_afc70e20117ea8083d11736f5ea8a9216}{set\+Left} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$l)
+\item 
+void \hyperlink{classNode_ad5c1f634547b3e2d03c3d55d355c0c17}{set\+Right} (\hyperlink{classNode}{Node}$<$ T $>$ $\ast$r)
+\item 
+void \hyperlink{classNode_a3162a541ae436cd98d61750f07f274b2}{set\+Key} (T d)
+\item 
+bool \hyperlink{classNode_a906ae0e0b015275eacf168ef55017f7f}{is\+Left} ()
+\item 
+bool \hyperlink{classNode_a983178a46cc464ca0738ee8c7d8b2cc4}{is\+Right} ()
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}{get\+Left} ()
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classNode_af9078f2651b16fc1a3502d7927761df1}{get\+Right} ()
+\item 
+\hyperlink{classNode_ae923d0417581dd19784d55b901f0f7f0}{$\sim$\+Node} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classNode_a2eaaeffaeef97da6291b788fa131c9ec}{left\+Child}
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ $\ast$ \hyperlink{classNode_a625cff56d169157a568afaedbb11576b}{right\+Child}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{classNode_a9d5e5c1914f5ed67389740354a607527}{key}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Node$<$ T $>$}
+
+Klasa wierzchołka w drzewie 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Typ} & klucza wierzchołka \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line 9 of file node.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNode_a46dceddf91d9d3c68f941333ae1a7dc1}\label{classNode_a46dceddf91d9d3c68f941333ae1a7dc1}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$ T $>$\+::\hyperlink{classNode}{Node} (\begin{DoxyParamCaption}\item[{T}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Konstruktor 
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+21                     \{
+22             this->\hyperlink{classNode_a9d5e5c1914f5ed67389740354a607527}{key} = \hyperlink{classNode_a9d5e5c1914f5ed67389740354a607527}{key};
+23         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_ae923d0417581dd19784d55b901f0f7f0}\label{classNode_ae923d0417581dd19784d55b901f0f7f0}} 
+\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{$\sim$\+Node()}{~Node()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$ T $>$\+::$\sim$\hyperlink{classNode}{Node} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Destruktor 
+
+Definition at line 80 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+80 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNode_a3c04afa4e4c8e555cc87a22757ab5f6a}\label{classNode_a3c04afa4e4c8e555cc87a22757ab5f6a}} 
+\index{Node@{Node}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+Key()}{getKey()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \hyperlink{classNode}{Node}$<$ T $>$\+::get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda zwracjąca klucz \begin{DoxyReturn}{Returns}
+Klucz wierzchołka 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+27                    \{
+28             \textcolor{keywordflow}{return} \hyperlink{classNode_a9d5e5c1914f5ed67389740354a607527}{key};
+29         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}\label{classNode_a1c884e62ef0a9b5dd4f35dbea09145f2}} 
+\index{Node@{Node}!get\+Left@{get\+Left}}
+\index{get\+Left@{get\+Left}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+Left()}{getLeft()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$T$>$$\ast$ \hyperlink{classNode}{Node}$<$ T $>$\+::get\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda zwracająca wskaźnik na lewego syna \begin{DoxyReturn}{Returns}
+Wskaźnik na lewego syna 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+69                            \{
+70              \textcolor{keywordflow}{return} \hyperlink{classNode_a2eaaeffaeef97da6291b788fa131c9ec}{leftChild};
+71         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_af9078f2651b16fc1a3502d7927761df1}\label{classNode_af9078f2651b16fc1a3502d7927761df1}} 
+\index{Node@{Node}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!Node@{Node}}
+\subsubsection{\texorpdfstring{get\+Right()}{getRight()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$T$>$$\ast$ \hyperlink{classNode}{Node}$<$ T $>$\+::get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda zwracająca wskaźnik na prawego syna \begin{DoxyReturn}{Returns}
+Wskaźnik na prawego syna 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+75                             \{
+76              \textcolor{keywordflow}{return} \hyperlink{classNode_a625cff56d169157a568afaedbb11576b}{rightChild};
+77         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_a906ae0e0b015275eacf168ef55017f7f}\label{classNode_a906ae0e0b015275eacf168ef55017f7f}} 
+\index{Node@{Node}!is\+Left@{is\+Left}}
+\index{is\+Left@{is\+Left}!Node@{Node}}
+\subsubsection{\texorpdfstring{is\+Left()}{isLeft()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \hyperlink{classNode}{Node}$<$ T $>$\+::is\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda sprawdzająca czy wierzchołek ma lewego syna \begin{DoxyReturn}{Returns}
+Prawdę, jeśli lewy syn istnieje. W przeciwnym wypadku fałsz 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+51                       \{
+52             \textcolor{keywordflow}{if}(\hyperlink{classNode_a2eaaeffaeef97da6291b788fa131c9ec}{leftChild} == NULL) \{
+53                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+54             \}
+55             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+56         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_a983178a46cc464ca0738ee8c7d8b2cc4}\label{classNode_a983178a46cc464ca0738ee8c7d8b2cc4}} 
+\index{Node@{Node}!is\+Right@{is\+Right}}
+\index{is\+Right@{is\+Right}!Node@{Node}}
+\subsubsection{\texorpdfstring{is\+Right()}{isRight()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \hyperlink{classNode}{Node}$<$ T $>$\+::is\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda sprawdzająca czy wierzchołek ma prawego syna \begin{DoxyReturn}{Returns}
+Prawdę, jeśli prawy syn istnieje. W przeciwnym wypadku fałsz 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+60                        \{
+61             \textcolor{keywordflow}{if}(\hyperlink{classNode_a625cff56d169157a568afaedbb11576b}{rightChild} == NULL) \{
+62                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+63             \}
+64             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+65         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_a3162a541ae436cd98d61750f07f274b2}\label{classNode_a3162a541ae436cd98d61750f07f274b2}} 
+\index{Node@{Node}!set\+Key@{set\+Key}}
+\index{set\+Key@{set\+Key}!Node@{Node}}
+\subsubsection{\texorpdfstring{set\+Key()}{setKey()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classNode}{Node}$<$ T $>$\+::set\+Key (\begin{DoxyParamCaption}\item[{T}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda ustawiająca nową wartość klucza 
+\begin{DoxyParams}{Parameters}
+{\em d} & Nowy klucz \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+45                          \{
+46             \hyperlink{classNode_a9d5e5c1914f5ed67389740354a607527}{key} = d;
+47         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_afc70e20117ea8083d11736f5ea8a9216}\label{classNode_afc70e20117ea8083d11736f5ea8a9216}} 
+\index{Node@{Node}!set\+Left@{set\+Left}}
+\index{set\+Left@{set\+Left}!Node@{Node}}
+\subsubsection{\texorpdfstring{set\+Left()}{setLeft()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classNode}{Node}$<$ T $>$\+::set\+Left (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}$<$ T $>$ $\ast$}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda ustawiająca nowego lewego potomka 
+\begin{DoxyParams}{Parameters}
+{\em l} & Wskaźnik na nowego potomka \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+33                                  \{
+34             \hyperlink{classNode_a2eaaeffaeef97da6291b788fa131c9ec}{leftChild} = l;
+35         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classNode_ad5c1f634547b3e2d03c3d55d355c0c17}\label{classNode_ad5c1f634547b3e2d03c3d55d355c0c17}} 
+\index{Node@{Node}!set\+Right@{set\+Right}}
+\index{set\+Right@{set\+Right}!Node@{Node}}
+\subsubsection{\texorpdfstring{set\+Right()}{setRight()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \hyperlink{classNode}{Node}$<$ T $>$\+::set\+Right (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}$<$ T $>$ $\ast$}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda ustawiająca nowego prawego potomka 
+\begin{DoxyParams}{Parameters}
+{\em r} & Wskaźnik na nowego potomka \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file node.\+hpp.
+
+
+\begin{DoxyCode}
+39                                   \{
+40             \hyperlink{classNode_a625cff56d169157a568afaedbb11576b}{rightChild} = r;
+41         \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classNode_a9d5e5c1914f5ed67389740354a607527}\label{classNode_a9d5e5c1914f5ed67389740354a607527}} 
+\index{Node@{Node}!key@{key}}
+\index{key@{key}!Node@{Node}}
+\subsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \hyperlink{classNode}{Node}$<$ T $>$\+::key\hspace{0.3cm}{\ttfamily [private]}}
+
+klucz wierzchołka 
+
+Definition at line 12 of file node.\+hpp.
+
+\mbox{\Hypertarget{classNode_a2eaaeffaeef97da6291b788fa131c9ec}\label{classNode_a2eaaeffaeef97da6291b788fa131c9ec}} 
+\index{Node@{Node}!left\+Child@{left\+Child}}
+\index{left\+Child@{left\+Child}!Node@{Node}}
+\subsubsection{\texorpdfstring{left\+Child}{leftChild}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$T$>$$\ast$ \hyperlink{classNode}{Node}$<$ T $>$\+::left\+Child}
+
+Lewy potomek wierzchołka 
+
+Definition at line 15 of file node.\+hpp.
+
+\mbox{\Hypertarget{classNode_a625cff56d169157a568afaedbb11576b}\label{classNode_a625cff56d169157a568afaedbb11576b}} 
+\index{Node@{Node}!right\+Child@{right\+Child}}
+\index{right\+Child@{right\+Child}!Node@{Node}}
+\subsubsection{\texorpdfstring{right\+Child}{rightChild}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\hyperlink{classNode}{Node}$<$T$>$$\ast$ \hyperlink{classNode}{Node}$<$ T $>$\+::right\+Child}
+
+Prawy potomek wierzchołka 
+
+Definition at line 17 of file node.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+node.\+hpp\end{DoxyCompactItemize}

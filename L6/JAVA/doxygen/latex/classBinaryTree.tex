@@ -1,0 +1,110 @@
+\hypertarget{classBinaryTree}{}\section{Binary\+Tree$<$ T extends Comparable$<$ T $>$ Class Template Reference}
+\label{classBinaryTree}\index{Binary\+Tree$<$ T extends Comparable$<$ T $>$@{Binary\+Tree$<$ T extends Comparable$<$ T $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classBinaryTree_a3c178b00a189f2384f872445d0650eba}{add\+Node} (T key)
+\item 
+String \hyperlink{classBinaryTree_a77eb76ed2fa0ca744cafc1863ca37903}{in\+Order} (\hyperlink{classNode}{Node}$<$ T $>$ focus\+Node)
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ \hyperlink{classBinaryTree_aa5345ff34f14685521f16e82d8ccf92b}{search} (T key)
+\item 
+void \hyperlink{classBinaryTree_ae1477b6a8cd79043d89cca9caa23a65d}{delete} (T key)
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ \hyperlink{classBinaryTree_af517213208f68c8d05d4c948fe2e99bd}{get\+Replacement\+Node} (\hyperlink{classNode}{Node}$<$ T $>$ replaced\+Node)
+\item 
+\hyperlink{classNode}{Node}$<$ T $>$ \hyperlink{classBinaryTree_a418ad03908efabbf2e7d271810bba07c}{get\+Root} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa tworząca drzewo danego typ 
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & typ danego drzewa \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBinaryTree_a3c178b00a189f2384f872445d0650eba}\label{classBinaryTree_a3c178b00a189f2384f872445d0650eba}} 
+\index{Binary\+Tree@{Binary\+Tree}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{add\+Node()}{addNode()}}
+{\footnotesize\ttfamily void \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T extends Comparable$<$ T $>$.add\+Node (\begin{DoxyParamCaption}\item[{T}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda dodająca wierzchołek w drzewie 
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz który przypiszemy do nowego węzła \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBinaryTree_ae1477b6a8cd79043d89cca9caa23a65d}\label{classBinaryTree_ae1477b6a8cd79043d89cca9caa23a65d}} 
+\index{Binary\+Tree@{Binary\+Tree}!delete@{delete}}
+\index{delete@{delete}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T extends Comparable$<$ T $>$.delete (\begin{DoxyParamCaption}\item[{T}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda usuwająca wierzchołek z drzewa 
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz który chcemy w drzewa usunąć \\
+\hline
+\end{DoxyParams}
+Sprawdzamy ilu potomków ma wierzchołek który chcemy usunąć
+
+W przypadku, gdy wierzchołek ma obu synów wywołujemy metodę odpowiednio zamieniającą miejscami pozostałe wierzchołki \mbox{\Hypertarget{classBinaryTree_af517213208f68c8d05d4c948fe2e99bd}\label{classBinaryTree_af517213208f68c8d05d4c948fe2e99bd}} 
+\index{Binary\+Tree@{Binary\+Tree}!get\+Replacement\+Node@{get\+Replacement\+Node}}
+\index{get\+Replacement\+Node@{get\+Replacement\+Node}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{get\+Replacement\+Node()}{getReplacementNode()}}
+{\footnotesize\ttfamily \hyperlink{classNode}{Node}$<$T$>$ \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T extends Comparable$<$ T $>$.get\+Replacement\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}$<$ T $>$}]{replaced\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda służąca do zastępowania usuwanego wierzchołka 
+\begin{DoxyParams}{Parameters}
+{\em replaced\+Node} & Usuwany wierzchołek \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wierzchołek którym zastąpimy usuwany wierzchołek 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBinaryTree_a418ad03908efabbf2e7d271810bba07c}\label{classBinaryTree_a418ad03908efabbf2e7d271810bba07c}} 
+\index{Binary\+Tree@{Binary\+Tree}!get\+Root@{get\+Root}}
+\index{get\+Root@{get\+Root}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{get\+Root()}{getRoot()}}
+{\footnotesize\ttfamily \hyperlink{classNode}{Node}$<$T$>$ \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T extends Comparable$<$ T $>$.get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda zwracająca Korzeń drzewa \begin{DoxyReturn}{Returns}
+Korzeń drzewa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBinaryTree_a77eb76ed2fa0ca744cafc1863ca37903}\label{classBinaryTree_a77eb76ed2fa0ca744cafc1863ca37903}} 
+\index{Binary\+Tree@{Binary\+Tree}!in\+Order@{in\+Order}}
+\index{in\+Order@{in\+Order}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{in\+Order()}{inOrder()}}
+{\footnotesize\ttfamily String \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T extends Comparable$<$ T $>$.in\+Order (\begin{DoxyParamCaption}\item[{\hyperlink{classNode}{Node}$<$ T $>$}]{focus\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda zwracająca napis będący zapis drzewa w formie in\+Order 
+\begin{DoxyParams}{Parameters}
+{\em focus\+Node} & Wierzchołek od którego zaczynamy wypisywanie \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Napis kluczy w drzewie 
+\end{DoxyReturn}
+Wywołujemy rekurencyjnie dla lewego poddrzewa
+
+Następnie wywołujemy rekurencyjnie dla prawego poddrzewa \mbox{\Hypertarget{classBinaryTree_aa5345ff34f14685521f16e82d8ccf92b}\label{classBinaryTree_aa5345ff34f14685521f16e82d8ccf92b}} 
+\index{Binary\+Tree@{Binary\+Tree}!search@{search}}
+\index{search@{search}!Binary\+Tree@{Binary\+Tree}}
+\subsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \hyperlink{classNode}{Node}$<$T$>$ \hyperlink{classBinaryTree}{Binary\+Tree}$<$ T extends Comparable$<$ T $>$.search (\begin{DoxyParamCaption}\item[{T}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda szukająca wierzchołka o danym kluczu 
+\begin{DoxyParams}{Parameters}
+{\em key} & Klucz, dla którego szukamy wierzchołek \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wierzchołęk o podanym kluczu lub N\+U\+LL 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BinaryTree_8java}{Binary\+Tree.\+java}\end{DoxyCompactItemize}
